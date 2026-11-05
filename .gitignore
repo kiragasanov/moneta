@@ -1,0 +1,23 @@
+# Зависимости
+node_modules/
+
+# Переменные окружения
+.env
+
+# База данных SQLite
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Сборка, логи и кэш
+dist/
+logs/
+*.log
+.cache/
+
+# Настройки редакторов
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,31 @@
+{
+  "name": "moneta",
+  "version": "1.0.0",
+  "description": "Клиентское веб-приложение для учета и анализа личных финансов",
+  "type": "module",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/index.js",
+    "migrate": "node --disable-warning=ExperimentalWarning server/db/migrate.js",
+    "seed": "node --disable-warning=ExperimentalWarning server/db/seed.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"tests/**/*.test.js\"",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "author": "Кирилл Гасанов",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.6.1",
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "globals": "^17.14.0",
+    "prettier": "^3.9.10"
+  }
+}
