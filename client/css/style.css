@@ -915,3 +915,12 @@ table.table {
     bottom: 84px;
   }
 }
+
+.budget-wrap {
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.budget-wrap + .budget-wrap {
+  margin-top: 20px;
+}

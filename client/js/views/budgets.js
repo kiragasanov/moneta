@@ -39,7 +39,7 @@ export async function budgetsView(root) {
     <div class="card mt" id="list">
       ${
         budgets.length
-          ? budgets.map((b) => `<div data-id="${b.id}" style="cursor:pointer">${budgetBar(b)}</div>`).join('')
+          ? budgets.map((b) => `<div class="budget-wrap" data-id="${b.id}">${budgetBar(b)}</div>`).join('')
           : '<div class="empty">На этот месяц бюджеты еще не заданы. Нажмите «+ Бюджет»</div>'
       }
     </div>`;
