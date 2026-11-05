@@ -6,11 +6,11 @@
 
 ## Стек
 
-| Часть | Технологии |
-| --- | --- |
-| Клиент | HTML5, CSS3, JavaScript (ES-модули), Chart.js |
-| Сервер | Node.js, Express |
-| База данных | SQLite (встроенный модуль `node:sqlite`), SQL-миграции |
+| Часть         | Технологии                                                |
+| ------------- | --------------------------------------------------------- |
+| Клиент        | HTML5, CSS3, JavaScript (ES-модули), Chart.js             |
+| Сервер        | Node.js, Express                                          |
+| База данных   | SQLite (встроенный модуль `node:sqlite`), SQL-миграции    |
 | Качество кода | ESLint, Prettier, тесты на `node:test`, коллекция Postman |
 
 ## Архитектура
@@ -58,34 +58,34 @@ npm start
 
 ## Команды
 
-| Команда | Назначение |
-| --- | --- |
-| `npm start` | запуск сервера |
-| `npm run dev` | запуск с автоматическим перезапуском при изменении файлов |
-| `npm run migrate` | применить миграции базы данных |
-| `npm run seed` | заполнить базу демонстрационными данными |
-| `npm test` | запустить тесты API |
-| `npm run lint` | проверка кода ESLint |
-| `npm run format` | форматирование кода Prettier |
+| Команда           | Назначение                                                |
+| ----------------- | --------------------------------------------------------- |
+| `npm start`       | запуск сервера                                            |
+| `npm run dev`     | запуск с автоматическим перезапуском при изменении файлов |
+| `npm run migrate` | применить миграции базы данных                            |
+| `npm run seed`    | заполнить базу демонстрационными данными                  |
+| `npm test`        | запустить тесты API                                       |
+| `npm run lint`    | проверка кода ESLint                                      |
+| `npm run format`  | форматирование кода Prettier                              |
 
 ## REST API
 
 Все ответы в формате JSON. Суммы передаются в рублях, в базе хранятся в копейках.
 
-| Метод | Адрес | Назначение |
-| --- | --- | --- |
-| GET | `/api/accounts` | список счетов с балансом |
-| POST, PUT, DELETE | `/api/accounts/:id` | создание, изменение, удаление счета |
-| GET | `/api/categories?type=` | список категорий |
-| POST, PUT, DELETE | `/api/categories/:id` | управление категориями |
-| GET | `/api/transactions?from&to&type&categoryId&accountId&search&limit&offset` | операции с фильтрами |
-| POST, PUT, DELETE | `/api/transactions/:id` | управление операциями |
-| GET | `/api/budgets?month=` | бюджеты месяца с фактическими расходами |
-| POST, PUT, DELETE | `/api/budgets/:id` | управление бюджетами |
-| GET | `/api/stats/summary?from&to` | доходы, расходы, баланс за период |
-| GET | `/api/stats/by-category?from&to&type` | распределение по категориям |
-| GET | `/api/stats/by-month?months&until` | динамика по месяцам |
-| GET | `/api/stats/insights?from&to` | средний расход в день, крупнейшая трата |
+| Метод             | Адрес                                                                     | Назначение                              |
+| ----------------- | ------------------------------------------------------------------------- | --------------------------------------- |
+| GET               | `/api/accounts`                                                           | список счетов с балансом                |
+| POST, PUT, DELETE | `/api/accounts/:id`                                                       | создание, изменение, удаление счета     |
+| GET               | `/api/categories?type=`                                                   | список категорий                        |
+| POST, PUT, DELETE | `/api/categories/:id`                                                     | управление категориями                  |
+| GET               | `/api/transactions?from&to&type&categoryId&accountId&search&limit&offset` | операции с фильтрами                    |
+| POST, PUT, DELETE | `/api/transactions/:id`                                                   | управление операциями                   |
+| GET               | `/api/budgets?month=`                                                     | бюджеты месяца с фактическими расходами |
+| POST, PUT, DELETE | `/api/budgets/:id`                                                        | управление бюджетами                    |
+| GET               | `/api/stats/summary?from&to`                                              | доходы, расходы, баланс за период       |
+| GET               | `/api/stats/by-category?from&to&type`                                     | распределение по категориям             |
+| GET               | `/api/stats/by-month?months&until`                                        | динамика по месяцам                     |
+| GET               | `/api/stats/insights?from&to`                                             | средний расход в день, крупнейшая трата |
 
 Коды ответов: `200` успех, `201` создано, `204` удалено, `400` ошибка в данных, `404` не найдено, `409` конфликт, `500` ошибка сервера.
 
