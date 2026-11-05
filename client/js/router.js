@@ -15,6 +15,8 @@ export function createRouter(routes, container) {
       link.classList.toggle('active', link.dataset.route === path);
     });
 
+    // При переходе на другую страницу закрываем открытые окна и удаляем старые графики
+    document.querySelectorAll('.modal-backdrop').forEach((modal) => modal.remove());
     destroyCharts();
     container.innerHTML = '<div class="skeleton"></div>';
     try {
